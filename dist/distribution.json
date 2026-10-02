@@ -1,0 +1,43 @@
+﻿{
+    "schemaVersion":  1,
+    "id":  "infinite-fire-torch",
+    "name":  "Stranded Deep Infinite Fire Torch",
+    "version":  "1.1.0",
+    "artifactBaseName":  "InfiniteFireTorch",
+    "type":  "mod",
+    "category":  "gameplay",
+    "description":  "Changes fire torch behavior.",
+    "packagePaths":  [
+                         "BepInEx/plugins/BamEx.InfiniteFireTorch"
+                     ],
+    "ownedPaths":  [
+                       "BepInEx/plugins/BamEx.InfiniteFireTorch"
+                   ],
+    "install":  {
+                    "restartRequired":  true
+                },
+    "dependencies":  [
+                         {
+                             "id":  "bepinex",
+                             "required":  true
+                         }
+                     ],
+    "optionalDependencies":  [
+
+                             ],
+    "conflicts":  [
+
+                  ],
+    "persistence":  {
+                        "usesBepInExConfig":  true,
+                        "usesGameSave":  false,
+                        "usesSidecarData":  false,
+                        "backupBeforeUpdate":  false
+                    },
+    "publishing":  {
+                       "repository":  "stranded-deep-infinite-fire-torch",
+                       "tag":  "v1.1.0",
+                       "releaseChannel":  "stable"
+                   },
+    "bepInExGuid":  "bamex.strandeddeep.infinitefiretorch"
+}
