@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "subtitle": "The vanilla Fire Torch without normal burn-time depletion.",
+  "description": "A focused quality-of-life mod for the vanilla Fire Torch, keeping it usable without normal burn-time depletion.",
+  "features": [
+    "Works with the vanilla Fire Torch instead of adding a replacement item.",
+    "Removes the need to replace a torch because its normal burn time has run out.",
+    "The change is focused on torch behavior and does not require a separate UI."
+  ],
+  "screenshotCaptions": {},
+  "faq": [
+    {
+      "question": "Does the mod add a new torch item?",
+      "answer": "No. It changes the behavior of the vanilla Fire Torch."
+    },
+    {
+      "question": "Does each split-screen player need a separate setting?",
+      "answer": "No. This is a runtime behavior change to the world item."
+    },
+    {
+      "question": "Is a release history included on the page?",
+      "answer": "Not yet. The changelog is intentionally empty until verified release notes are curated."
+    }
+  ],
+  "changelog": []
+}

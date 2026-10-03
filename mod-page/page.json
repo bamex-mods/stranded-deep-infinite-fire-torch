@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "infinite-fire-torch",
+  "defaultLocale": "en",
+  "locales": {
+    "en": "en.json",
+    "ru": "ru.json"
+  },
+  "media": {
+    "cover": "media/cover.jpg",
+    "screenshots": []
+  },
+  "tags": [
+    "torch",
+    "fire",
+    "quality_of_life"
+  ],
+  "highlights": [
+    "torch",
+    "fire"
+  ]
+}
