@@ -25,7 +25,7 @@ namespace BamEx.StrandedDeep.InfiniteFireTorch
             "BamEx Infinite Fire Torch";
 
         public const string PluginVersion =
-            "1.1.0";
+            "1.1.1";
 
         private const string ModSettingsGuid =
             "com.bamex.strandeddeep.modsettings";
@@ -166,9 +166,10 @@ namespace BamEx.StrandedDeep.InfiniteFireTorch
         private void RegisterModSettings()
         {
             bool modRegistered =
-                ModSettingsClient.RegisterMod(
+                ModSettingsClient.RegisterModLocalized(
                     ModSettingsId,
                     "ФАКЕЛ",
+                    "FIRE TORCH",
                     600
                 );
 
@@ -183,13 +184,16 @@ namespace BamEx.StrandedDeep.InfiniteFireTorch
             }
 
             bool toggleRegistered =
-                ModSettingsClient.AddToggle(
+                ModSettingsClient.AddToggleLocalized(
                     ModSettingsId,
                     "infiniteFuel",
                     "Бесконечное топливо",
+                    "Infinite Fuel",
                     100,
                     "Вкл.",
+                    "On",
                     "Выкл.",
+                    "Off",
                     GetInfiniteFuel,
                     SetInfiniteFuel
                 );

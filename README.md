@@ -1,8 +1,17 @@
-# BamEx Infinite Fire Torch v1.1.0
+# BamEx Infinite Fire Torch v1.1.1
 
 Обновление существующего `v1.0.0`.
 
 ## Что изменилось
+
+### v1.1.1
+
+- Added Russian/English localization for the Mod Settings section and toggle.
+- Synced the vendored bridge with the authoritative bilingual SDK.
+- Infinite-fire gameplay, ConfigEntry ownership and split-screen behavior are unchanged.
+- Russian/English Mod Settings and torch gameplay were field-tested before publication.
+
+### v1.1.0
 
 Добавлена интеграция с общим Stranded Deep Mod Settings API.
 
@@ -61,7 +70,7 @@ BepInEx ConfigEntry<bool>, default `true`.
 ## Installation
 
 1. Install BepInEx for Stranded Deep.
-2. Download `InfiniteFireTorch-1.1.0.zip` from the GitHub Release.
+2. Download `InfiniteFireTorch-1.1.1.zip` from the GitHub Release.
 3. Extract the archive into the Stranded Deep game directory.
 4. Allow the included `BepInEx` folder to merge with the existing `BepInEx` folder.
 5. Verify that this file exists:

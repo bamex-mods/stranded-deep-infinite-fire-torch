@@ -1,4 +1,6 @@
 ﻿param(
+    [Alias("GameDir")]
+    [string]$GameRoot = $env:STRANDED_DEEP_GAME_ROOT,
     [switch]$Deploy
 )
 
@@ -9,38 +11,16 @@ $PluginGuid = "bamex.strandeddeep.infinitefiretorch"
 
 $SourceFiles = @(
     (Join-Path $PSScriptRoot "Plugin.cs"),
-    (Join-Path $PSScriptRoot "ModSettingsClient.cs")
+    (Join-Path $PSScriptRoot "SDK\ModSettingsClient.cs")
 )
 
 $BuildDir = Join-Path $PSScriptRoot "build"
 $OutputDll = Join-Path $BuildDir "$ModName.dll"
 
-$GameCandidates = @(
-    "F:\SteamLibrary\steamapps\common\Stranded Deep",
-    "C:\Program Files (x86)\Steam\steamapps\common\Stranded Deep",
-    "C:\Program Files\Steam\steamapps\common\Stranded Deep",
-    "D:\SteamLibrary\steamapps\common\Stranded Deep",
-    "E:\SteamLibrary\steamapps\common\Stranded Deep",
-    "G:\SteamLibrary\steamapps\common\Stranded Deep"
-)
+$GameDir = $GameRoot
 
-$GameDir = $null
-
-foreach ($Candidate in $GameCandidates) {
-    $AssemblyCSharp =
-        Join-Path $Candidate "Stranded_Deep_Data\Managed\Assembly-CSharp.dll"
-
-    $BepInExDll =
-        Join-Path $Candidate "BepInEx\core\BepInEx.dll"
-
-    if ((Test-Path $AssemblyCSharp) -and (Test-Path $BepInExDll)) {
-        $GameDir = $Candidate
-        break
-    }
-}
-
-if ($null -eq $GameDir) {
-    throw "Stranded Deep with BepInEx was not found."
+if ([string]::IsNullOrWhiteSpace($GameDir)) {
+    throw "GameRoot was not supplied. Pass -GameRoot or set STRANDED_DEEP_GAME_ROOT."
 }
 
 $BepInExCore = Join-Path $GameDir "BepInEx\core"
@@ -96,7 +76,7 @@ foreach ($SourceFile in $SourceFiles) {
 }
 
 Write-Host ""
-Write-Host "Building BamEx Infinite Fire Torch v1.1.0..."
+Write-Host "Building BamEx Infinite Fire Torch v1.1.1..."
 Write-Host "Workspace: $PSScriptRoot"
 Write-Host "Game:      $GameDir"
 Write-Host "Compiler:  $Csc"
